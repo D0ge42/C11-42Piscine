@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   signs.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 11:42:03 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/21 23:05:56 by lorenzo          ###   ########.fr       */
+/*   Created: 2024/08/21 23:11:13 by lorenzo           #+#    #+#             */
+/*   Updated: 2024/08/21 23:12:28 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft.h"
 
-
-int main(int ac, char **av)
+int sum(int a, int b)
 {
-	if(ac == 4)
-		do_op(av[1],av[2],av[3]);
+	return a + b;
 }
+
+int div(int a, int b)
+{
+	return a / b;
+}
+
+int mult(int a, int b)
+{
+	return a * b;
+}
+
+int sub(int a, int b)
+{
+	return a - b;
+}
+
+int mod(int a, int b)
+{
+	return a % b;
+}
+

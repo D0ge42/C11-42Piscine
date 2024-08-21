@@ -1,6 +1,6 @@
 DIR	= ./srcs/
 
-SRC	= main.c ft_atoi.c ft_operators.c ft_putchar.c ft_putnbr.c ft_putstr.c
+SRC	= signs.c do_op.c main.c ft_atoi.c ft_putchar.c ft_putnbr.c ft_putstr.c
 
 SRCS	= ${addprefix ${DIR}, ${SRC}}
 
