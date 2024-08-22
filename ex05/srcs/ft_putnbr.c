@@ -6,23 +6,23 @@
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 12:40:21 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/20 16:38:50 by lorenzo          ###   ########.fr       */
+/*   Updated: 2024/08/22 12:35:39 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft.h"
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-        long    n;
+	long	n;
 
-        n = nb;
-        if (n < 0)
-        {
-                ft_putchar('-');
-                n *= -1;
-        }
-        if (nb > 9)
-                ft_putnbr(nb / 10);
-        ft_putchar(nb % 10 + '0');
+	n = nb;
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n *= -1;
+	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	ft_putchar(nb % 10 + '0');
 }

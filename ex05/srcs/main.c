@@ -6,15 +6,14 @@
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:42:03 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/21 23:05:56 by lorenzo          ###   ########.fr       */
+/*   Updated: 2024/08/22 12:41:40 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft.h"
 
-
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	if(ac == 4)
-		do_op(av[1],av[2],av[3]);
+	if (ac == 4)
+		do_op(av[1], av[2], av[3]);
 }

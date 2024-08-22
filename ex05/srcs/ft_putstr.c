@@ -6,13 +6,13 @@
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 12:38:56 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/20 12:39:19 by lorenzo          ###   ########.fr       */
+/*   Updated: 2024/08/22 12:33:30 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft.h"
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	while (*str)
 		write(1, str++, 1);

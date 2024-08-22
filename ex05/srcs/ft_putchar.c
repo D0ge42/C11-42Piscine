@@ -6,13 +6,13 @@
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 12:38:19 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/20 12:38:48 by lorenzo          ###   ########.fr       */
+/*   Updated: 2024/08/22 12:32:26 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft.h"
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

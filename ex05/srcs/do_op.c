@@ -6,43 +6,69 @@
 /*   By: lorenzo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 22:52:58 by lorenzo           #+#    #+#             */
-/*   Updated: 2024/08/21 23:14:29 by lorenzo          ###   ########.fr       */
+/*   Updated: 2024/08/22 12:38:57 by lorenzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-
-int get_ope(char *op)
+int	special_test(char *n1, char *op, char *n2)
 {
-	int	i;
+	int	nb1;
+	int	nb2;
+
+	nb1 = ft_atoi(n1);
+	nb2 = ft_atoi(n2);
+	if (nb1 && nb2 == 0 && get_ope(op) == 2)
+	{
+		ft_putstr("Stop : division by zero");
+		return (1);
+	}
+	else if (nb1 && nb2 == 0 && get_ope(op) == 4)
+	{
+		ft_putstr("Stop : modulo by zero");
+		return (1);
+	}
+	return (0);
+}
+
+int	get_ope(char *op)
+{
+	int		i;
 	char	*list;
 
 	list = "+-/*%";
 	i = -1;
-	while(list[++i])
+	while (list[++i])
 	{
-		if(list[i] == op[0] && op[1] == '\0')
+		if (list[i] == op[0] && op[1] == '\0')
 			return (i);
 	}
-	return -1;
+	return (-1);
 }
 
-void do_op(char *n1, char *op, char *n2)
+void	do_op(char *n1, char *op, char *n2)
 {
-	int (*p[5]) (int x, int y);
-	int nb1 = ft_atoi(n1);
-	int nb2 = ft_atoi(n2);
-	int ope = get_ope(op);
+	int	(*p[5])(int x, int y);
+	int	nb1;
+	int	nb2;
+	int	ope;
 
+	nb2 = ft_atoi(n2);
+	ope = get_ope(op);
+	nb1 = ft_atoi(n2);
 	p[0] = sum;
 	p[1] = sub;
 	p[2] = div;
 	p[3] = mult;
 	p[4] = mod;
-
-	ft_putnbr(p[ope] (nb1, nb2));
+	if (get_ope(op) == -1)
+	{
+		ft_putnbr(0);
+		ft_putchar('\n');
+		return ;
+	}
+	if (!special_test(n1, op, n2))
+		ft_putnbr(p[ope](nb1, nb2));
 	ft_putchar('\n');
 }
-
-
